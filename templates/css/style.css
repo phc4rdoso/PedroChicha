@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  /* colors */
+  --bg-login: hsl(211, 100%, 95%);
+  --color-error: hsl(0, 86%, 59%);
+}
+
+body {
+  background: linear-gradient(45deg, #27005d 0%, #9400ff 50%, #aed2ff 100%);
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+#login {
+  background-color: var(--bg-login);
+  text-align: center;
+  align-items: center;
+  padding: 4.8rem 6.4rem;
+  width: 30rem;
+  height: 28rem;
+
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  margin: auto;
+}
+
+/* form */
+form .myForm {
+  display: flex;
+  width: 30rem;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+div .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.input-wrapper label:hover {
+  color: #27005d;
+}
+
+.input-wrapper input {
+  padding: 1.6rem;
+  width: 18rem;
+  height: 5.2rem;
+  margin-bottom: 1.6rem;
+  border-radius: 0.4rem;
+  background-color: var(--color-form);
+  border: solid 0.1rem #9400ff;
+  color: #27005d;
+}
+
+form button {
+  display: flex;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  height: 5.2rem;
+  padding: 1.6rem;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  margin-top: 1.6rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #6b93c5;
+  color: white;
+  gap: 0.8rem;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #85b1e7;
+}
+
+/* Alert error */
+.alert-error.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.alert-error {
+  background-color: var(--color-error);
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 3.6rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+  transition: transform 0.7s;
+}
+
+.alert-error p {
+  margin: 0.8rem auto;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

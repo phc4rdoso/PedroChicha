@@ -1,5 +1,45 @@
-<head>
-</head>
-<body>
-    <p>Hello, World!</p>
-</body>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/2048px-User_font_awesome.svg.png"
+      type="image/x-icon"
+    />
+    <script src="./Js/main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="alert-error">
+      <p>Usuário e senha incorretos</p>
+    </div>
+    <div class="container">
+      <div id="login">
+        <form id="myForm" action="requestLogin()">
+          <div class="input-wrapper">
+            <label for="user"></label>
+            <input type="text" id="user" placeholder="E-mail" required />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="password"></label>
+            <input
+              type="text"
+              id="password"
+              placeholder="Senha"
+              required
+              maxlength="8"
+            />
+          </div>
+
+          <button type="submit" id="btnLogin">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
